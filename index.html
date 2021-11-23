@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./image/logo_test.png" alt="" />
+      <div>
+        <span>html</span>
+        <span>css</span>
+        <span>javascript</span>
+      </div>
+      <button class="btn-header" type="submit">ENTER</button>
+    </header>
+    <div class="slider">
+      <!-- <buton class="button slider-prev">Prev</buton> -->
+      <div class="slider-line">
+        <img src="./image/1.png" alt="" />
+        <img src="./image/2.png" alt="" />
+        <img src="./image/4.png" alt="" />
+        <img src="./image/5.png" alt="" />
+      </div>
+      <buton class="button slider-next"> &#10148;</buton>
+    </div>
+
+    <div class="about">
+      <div>
+        <h2>Somethind about you</h2>
+        <p>
+          In this section, you can specify any information about yourself,
+          insertyour photos, your photos, yourinterests and skils. It is also
+          desirable to use tag canvas.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+          molestiae debitis tenetur. Velit quia cupiditate, minima assumenda
+          reiciendis alias dolorum distinctio neque repudiandae eaque eos dicta
+          soluta quasi asperiores placeat? Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Praesentium molestiae debitis tenetur.
+          Velit quia cupiditate, minima assumenda reiciendis alias dolorum
+          distinctio neque repudiandae eaque eos dicta soluta quasi asperiores
+          placeat? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Praesentium molestiae debitis tenetur. Velit quia cupiditate, minima
+          assumenda reiciendis alias dolorum distinctio neque repudiandae eaque
+          eos dicta soluta quasi asperiores placeat?Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Praesentium molestiae debitis tenetur.
+          Velit quia cupiditate, minima assumenda reiciendis alias dolorum
+          distinctio neque repudiandae eaque eos dicta soluta quasi asperiores
+          placeat? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Praesentium molestiae debitis tenetur. Velit quia cupiditate, minima
+          assumenda reiciendis alias dolorum distinctio neque repudiandae eaque
+          eos dicta soluta quasi asperiores placeat?Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Praesentium molestiae debitis tenetur.
+          Velit quia cupiditate, minima assumenda reiciendis alias dolorum
+          distinctio neque repudiandae
+        </p>
+      </div>
+      <div>
+        <p>Your Photo</p>
+        <img src="./image/img_info.png" alt="" />
+      </div>
+    </div>
+    <div class="register">
+      <!-- <img class="img-background" src="https://static4.depositphotos.com/1000423/454/i/600/depositphotos_4548401-stock-photo-symbol-of-yin-and-yang.jpg" alt="" class="src"> -->
+
+      <form class="forma" action="">
+        <p>Register</p>
+        <div class="inputs">
+          <input type="text" name="login" placeholder="Email" />
+        </div>
+        <div class="inputs">
+          <input type="text" name="password" placeholder="Password" />
+        </div>
+        <div class="myselect">
+          <!-- <select name="" id="">
+                <option value="">Country 1</option>
+                <option value="">Country 2</option>
+                <option value="">Country 3</option>
+            </select> -->
+          <label for="select" class="select">
+            <input
+              type="radio"
+              name="list"
+              value="not_changed"
+              id="bg"
+              checked
+            />
+            <input type="radio" name="list" value="not_changed" id="select" />
+            <label class="bg" for="bg"></label>
+            <div class="items">
+              <input
+                type="radio"
+                name="list"
+                value="first_value"
+                id="list[0]"
+              />
+              <label for="list[0]">Country 1</label>
+              <input
+                type="radio"
+                name="list"
+                value="second_value"
+                id="list[1]"
+              />
+              <label for="list[1]">Country 2</label>
+              <input
+                type="radio"
+                name="list"
+                value="third_value"
+                id="list[2]"
+              />
+              <label for="list[2]">Country 3</label>
+              <span id="text">Country</span>
+            </div>
+          </label>
+        </div>
+
+        <input class="btn-submit" type="submit" name="submit" value="Sign up" />
+      </form>
+    </div>
+
+    <footer class="footer">&copy; 2015 layout</footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

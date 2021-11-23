@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100&family=Nanum+Gothic&display=swap');
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 1fr 1fr 1fr 5%;
+  grid-template-areas:
+    "head"
+    "slider"
+    "about"
+    "register"
+    "footer";
+  height: 100vh;
+  margin: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: rgb(45, 63, 80);
+  grid-area: head;
+}
+
+.header img {
+  height: 100%;
+}
+
+.header div {
+  display: flex;
+  width: 300px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+
+  color: white;
+}
+
+.btn-header {
+  background-color: rgb(46, 164, 94);
+  color: white;
+  height: 75%;
+  width: 80px;
+  border: none;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.slider {
+  height: 400px;
+  overflow: hidden;
+  grid-area: slider;
+}
+
+.slider-line {
+  display: flex;
+  transition: all ease 1s;
+}
+
+/* .slider-prev {
+  z-index: 99;
+  position: absolute;
+  top: 200px;
+} */
+
+.slider-next {
+  position: absolute;
+  top: 200px;
+  right: 10px;
+  z-index: 99;
+  float: right;
+  margin-right: 100px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  grid-area: about;
+  padding: 0px 200px 0px 200px;
+}
+
+.about img {
+  height: 400px;
+}
+
+.about p {
+  width: 70%;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+
+  grid-area: register;
+  background-image: url("https://st2.depositphotos.com/3570295/6066/i/600/depositphotos_60665123-stock-photo-bangkok-blurred-abstract-background-lights.jpg");
+}
+
+.forma {
+  width: 450px;
+  height: 70%;
+  text-align: center;
+  background-color: white;
+}
+
+.forma p {
+  color: rgb(176, 176, 176);
+  font-size: 25px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 300px;
+  height: 35px;
+  font-size: 18px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  padding-left: 10px;
+  border: none;
+  border-top: 2px solid rgb(221, 221, 221);
+  background-color: rgb(245, 245, 245);
+}
+
+.btn-submit {
+  padding: 7px 30px;
+  margin: 25px 0 20px 0;
+  font-size: 15px;
+  color: rgb(117, 117, 117);
+  background-color: rgb(245, 245, 245);
+  border: none;
+}
+
+.select input {
+  display: none;
+}
+
+#text {
+  position: absolute;
+  display: block;
+  align-items: center;
+  top: 0;
+  color: rgb(117, 117, 117);
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.select {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 160px;
+  height: 34px;
+  line-height: 30px;
+  position: relative;
+}
+
+.select input[name="list"]:not(:checked) ~ #text {
+  color: rgb(117, 117, 117);
+  background-color: rgb(245, 245, 245);
+}
+
+.select input[name="list"]:checked ~ #text {
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+#select:disabled ~ .items #text {
+  border: none;
+  background-color: rgb(245, 245, 245);
+}
+
+.items {
+  overflow-y: scroll;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  width: 310px;
+  min-height: 30px;
+  font-size: 18px;
+  margin-bottom: 25px;
+
+  border-radius: 4px;
+  text-align: left;
+  background-color: rgb(245, 245, 245);
+}
+
+#select:not(:checked) ~ .items {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+
+  border-top: 2px solid rgb(221, 221, 221);
+  height: 40px;
+}
+
+.items label {
+  border: 2px solid rgb(221, 221, 221);
+  display: none;
+  padding-left: 10px;
+
+  color: rgb(117, 117, 117);
+  background: white;
+}
+
+.items label:hover {
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+}
+
+#select:checked ~ .items {
+  padding-top: 30px;
+}
+
+#select:checked ~ .items label {
+  height: 40px;
+  align-items: center;
+  display: flex;
+}
+
+#select:checked ~ .items label:nth-child(2) {
+  margin-top: 10px;
+}
+
+.items input:checked + label {
+  display: block !important;
+  border: none;
+  text-align: left;
+  background-color: rgb(245, 245, 245);
+}
+
+.footer {
+  text-align: center;
+  color: rgb(136, 146, 155);
+  padding-top: 10px;
+  background-color: rgb(45, 63, 80);
+  grid-area: footer;
+}
